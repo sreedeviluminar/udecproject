@@ -6,6 +6,7 @@ import 'Second.dart';
 
 void main() {
   runApp(MaterialApp(
+    theme: ThemeData(primarySwatch: Colors.green),
     debugShowCheckedModeBanner: false,
     home: SplashScreen(),
   ));
@@ -17,12 +18,14 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
- @override
+  @override
   void initState() {
-      Timer(Duration(seconds: 5), () { 
-        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>LoginScreen()));
-      });
+    Timer(Duration(seconds: 2), () {
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => LoginScreen()));
+    });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,9 +36,8 @@ class _SplashScreenState extends State<SplashScreen> {
         // color: Colors.greenAccent,
         decoration: const BoxDecoration(
             image: DecorationImage(
-              fit: BoxFit.fill,
-                image: AssetImage(
-                    "assets/images/greentexture.png"))),
+                fit: BoxFit.fill,
+                image: AssetImage("assets/images/greentexture.png"))),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -61,7 +63,10 @@ class _SplashScreenState extends State<SplashScreen> {
 
               Text(
                 "MY HOME",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 50,color: Colors.white),
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 50,
+                    color: Colors.white),
               )
             ],
           ),
