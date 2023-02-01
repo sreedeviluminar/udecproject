@@ -1,17 +1,20 @@
 import 'dart:async';
 
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:udecproject/ListDemo.dart';
 
-import 'Second.dart';
 import 'loginpage.dart';
 
 void main() {
-  runApp(MaterialApp(
-    theme: ThemeData(primarySwatch: Colors.green),
-    debugShowCheckedModeBanner: false,
-    home: SplashScreen(),
-  ));
+  runApp(DevicePreview(
+      enabled: !kReleaseMode,
+      builder: (context) => MaterialApp(
+            home: SplashScreen(),
+            useInheritedMediaQuery: true,
+            locale: DevicePreview.locale(context),
+            builder: DevicePreview.appBuilder,
+          )));
 }
 
 class SplashScreen extends StatefulWidget {
@@ -24,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     Timer(Duration(seconds: 1), () {
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => ListDemo()));
+          MaterialPageRoute(builder: (context) => LoginPage()));
     });
   }
 
