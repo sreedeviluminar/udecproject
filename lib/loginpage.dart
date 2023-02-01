@@ -82,7 +82,7 @@ class _LoginPageState extends State {
                     Fluttertoast.showToast(
                         msg: "Login Failed",
                         toastLength: Toast.LENGTH_SHORT,
-                        gravity: ToastGravity.BOTTOM,
+                        gravity: ToastGravity.CENTER_RIGHT,
                         //timeInSecForIosWeb: 1,
                         backgroundColor: Colors.red,
                         textColor: Colors.white,
