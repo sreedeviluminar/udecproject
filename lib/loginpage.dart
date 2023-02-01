@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 import 'homepage.dart';
 
@@ -78,7 +79,15 @@ class _LoginPageState extends State {
                     Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) => HomePage()));
                   } else {
-                    return null;
+                    Fluttertoast.showToast(
+                        msg: "Login Failed",
+                        toastLength: Toast.LENGTH_SHORT,
+                        gravity: ToastGravity.BOTTOM,
+                        //timeInSecForIosWeb: 1,
+                        backgroundColor: Colors.red,
+                        textColor: Colors.white,
+                        fontSize: 16.0
+                    );
                   }
                 },
                 child: const Text("LOGIN"))
