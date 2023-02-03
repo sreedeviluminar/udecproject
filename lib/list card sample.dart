@@ -26,42 +26,46 @@ class ListCard extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             children: [
               const Image(image: AssetImage("assets/icons/apple.png"),width: 100,height: 100,),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  RichText(
-                      maxLines: 1,
-                      text: const TextSpan(
-                          text: "Name: ",
-                          style: TextStyle(color: Colors.yellow),
-                          children: [
-                            TextSpan(
-                              text: "Apple",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ])),
-                  RichText(
-                      maxLines: 1,
-                      text: const TextSpan(
-                          text: "Unit: ",
-                          style: TextStyle(color: Colors.yellow),
-                          children: [
-                            TextSpan(
-                              text: "20kg",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ])),
-                  RichText(
-                      maxLines: 1,
-                      text: const TextSpan(
-                          text: "Price: ",
-                          children: [
-                            TextSpan(
-                              text: "300",
-                              style: TextStyle(fontWeight: FontWeight.bold,color: Colors.red),
-                            )
-                          ])),
-                ],
+              SizedBox(
+                width: 120,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    RichText(
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        text: const TextSpan(
+                            text: "Name: ",
+                            style: TextStyle(color: Colors.yellow),
+                            children: [
+                              TextSpan(
+                                text: "Applejkbhvhjvhjbnvjgcgvbnmbvcbnvcvgbnvgbnvgc",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              )
+                            ])),
+                    RichText(
+                        maxLines: 1,
+                        text: const TextSpan(
+                            text: "Unit: ",
+                            style: TextStyle(color: Colors.yellow),
+                            children: [
+                              TextSpan(
+                                text: "20kg",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              )
+                            ])),
+                    RichText(
+                        maxLines: 1,
+                        text: const TextSpan(
+                            text: "Price: ",
+                            children: [
+                              TextSpan(
+                                text: "300",
+                                style: TextStyle(fontWeight: FontWeight.bold,color: Colors.red),
+                              )
+                            ])),
+                  ],
+                ),
               ),
               ElevatedButton(
                 onPressed: () {},
