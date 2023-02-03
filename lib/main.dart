@@ -4,6 +4,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:udecproject/List_Separator.dart';
+import 'package:udecproject/UI/phonelist.dart';
 import 'ListView_With_Builder.dart';
 import 'loginpage.dart';
 
@@ -28,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     Timer(Duration(seconds: 1), () {
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => List_Separator()));
+          MaterialPageRoute(builder: (context) => PhoneList()));
     });
   }
 
