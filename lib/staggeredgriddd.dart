@@ -7,7 +7,8 @@ import 'package:udecproject/mywidget.dart';
 void main() {
   runApp(DevicePreview(
       enabled: !kReleaseMode,
-      builder: (context) => MaterialApp(
+      builder: (context) =>
+          MaterialApp(
             home: Staggerdddd(),
             useInheritedMediaQuery: true,
             locale: DevicePreview.locale(context),
@@ -16,6 +17,19 @@ void main() {
 }
 
 class Staggerdddd extends StatelessWidget {
+  var icons = [
+    Icons.account_box_sharp,
+    Icons.account_box_sharp,
+    Icons.account_box_sharp,
+    Icons.account_box_sharp,
+    Icons.account_box_sharp,
+    Icons.account_box_sharp,
+    Icons.account_box_sharp,
+    Icons.account_box_sharp,
+    Icons.account_box_sharp,
+    Icons.account_box_sharp
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,52 +44,52 @@ class Staggerdddd extends StatelessWidget {
                     crossAxisCellCount: 4,
                     mainAxisCellCount: 4,
                     child: MyCustomWidget(
-                      icons: Icons.account_box_sharp,
+                      icons: icons[index],
                       bgcolor: Colors.yellowAccent,
                     ));
               })
 
-              // [
-              // StaggeredGridTile.count(
-              //     crossAxisCellCount: 2,
-              //     mainAxisCellCount: 2,
-              //     child: MyCustomWidget(
-              //       icons: Icons.account_box_sharp,
-              //       bgcolor: Colors.yellowAccent,
-              //     )),
-              // StaggeredGridTile.count(
-              //     crossAxisCellCount: 2,
-              //     mainAxisCellCount: 2,
-              //     child: MyCustomWidget(
-              //       icons: Icons.doorbell_outlined,
-              //     )),
-              // StaggeredGridTile.count(
-              //     crossAxisCellCount: 2,
-              //     mainAxisCellCount: 3,
-              //     child: MyCustomWidget(
-              //       icons: Icons.food_bank,
-              //     )),
-              // StaggeredGridTile.count(
-              //     crossAxisCellCount: 2,
-              //     mainAxisCellCount: 2,
-              //     child:MyCustomWidget(
-              //       icons: Icons.remove_red_eye,
-              //       bgcolor: Colors.red,
-              //     )),
-              // StaggeredGridTile.count(
-              //     crossAxisCellCount: 2,
-              //     mainAxisCellCount: 3,
-              //     child: MyCustomWidget(
-              //       icons: Icons.password,
-              //     )),
-              // StaggeredGridTile.count(
-              //     crossAxisCellCount: 2,
-              //     mainAxisCellCount: 3,
-              //     child: MyCustomWidget(
-              //       icons: Icons.flag_circle,
-              //     ))
-              // ],
-              ),
+            // [
+            // StaggeredGridTile.count(
+            //     crossAxisCellCount: 2,
+            //     mainAxisCellCount: 2,
+            //     child: MyCustomWidget(
+            //       icons: Icons.account_box_sharp,
+            //       bgcolor: Colors.yellowAccent,
+            //     )),
+            // StaggeredGridTile.count(
+            //     crossAxisCellCount: 2,
+            //     mainAxisCellCount: 2,
+            //     child: MyCustomWidget(
+            //       icons: Icons.doorbell_outlined,
+            //     )),
+            // StaggeredGridTile.count(
+            //     crossAxisCellCount: 2,
+            //     mainAxisCellCount: 3,
+            //     child: MyCustomWidget(
+            //       icons: Icons.food_bank,
+            //     )),
+            // StaggeredGridTile.count(
+            //     crossAxisCellCount: 2,
+            //     mainAxisCellCount: 2,
+            //     child:MyCustomWidget(
+            //       icons: Icons.remove_red_eye,
+            //       bgcolor: Colors.red,
+            //     )),
+            // StaggeredGridTile.count(
+            //     crossAxisCellCount: 2,
+            //     mainAxisCellCount: 3,
+            //     child: MyCustomWidget(
+            //       icons: Icons.password,
+            //     )),
+            // StaggeredGridTile.count(
+            //     crossAxisCellCount: 2,
+            //     mainAxisCellCount: 3,
+            //     child: MyCustomWidget(
+            //       icons: Icons.flag_circle,
+            //     ))
+            // ],
+          ),
         ),
       ),
     );
