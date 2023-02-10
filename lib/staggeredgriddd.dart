@@ -22,50 +22,60 @@ class Staggerdddd extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: StaggeredGrid.count(
-            crossAxisCount: 4,
-            mainAxisSpacing: 4,
-            crossAxisSpacing: 4,
-            children: [
-              StaggeredGridTile.count(
-                  crossAxisCellCount: 2,
-                  mainAxisCellCount: 2,
-                  child: MyCustomWidget(
-                    icons: Icons.account_box_sharp,
-                    bgcolor: Colors.yellowAccent,
-                  )),
-              StaggeredGridTile.count(
-                  crossAxisCellCount: 2,
-                  mainAxisCellCount: 2,
-                  child: MyCustomWidget(
-                    icons: Icons.doorbell_outlined,
-                  )),
-              StaggeredGridTile.count(
-                  crossAxisCellCount: 2,
-                  mainAxisCellCount: 3,
-                  child: MyCustomWidget(
-                    icons: Icons.food_bank,
-                  )),
-              StaggeredGridTile.count(
-                  crossAxisCellCount: 2,
-                  mainAxisCellCount: 2,
-                  child:MyCustomWidget(
-                    icons: Icons.remove_red_eye,
-                    bgcolor: Colors.red,
-                  )),
-              StaggeredGridTile.count(
-                  crossAxisCellCount: 2,
-                  mainAxisCellCount: 3,
-                  child: MyCustomWidget(
-                    icons: Icons.password,
-                  )),
-              StaggeredGridTile.count(
-                  crossAxisCellCount: 2,
-                  mainAxisCellCount: 3,
-                  child: MyCustomWidget(
-                    icons: Icons.flag_circle,
-                  ))
-            ],
-          ),
+              crossAxisCount: 4,
+              mainAxisSpacing: 4,
+              crossAxisSpacing: 4,
+              children: List.generate(10, (index) {
+                return StaggeredGridTile.count(
+                    crossAxisCellCount: 4,
+                    mainAxisCellCount: 4,
+                    child: MyCustomWidget(
+                      icons: Icons.account_box_sharp,
+                      bgcolor: Colors.yellowAccent,
+                    ));
+              })
+
+              // [
+              // StaggeredGridTile.count(
+              //     crossAxisCellCount: 2,
+              //     mainAxisCellCount: 2,
+              //     child: MyCustomWidget(
+              //       icons: Icons.account_box_sharp,
+              //       bgcolor: Colors.yellowAccent,
+              //     )),
+              // StaggeredGridTile.count(
+              //     crossAxisCellCount: 2,
+              //     mainAxisCellCount: 2,
+              //     child: MyCustomWidget(
+              //       icons: Icons.doorbell_outlined,
+              //     )),
+              // StaggeredGridTile.count(
+              //     crossAxisCellCount: 2,
+              //     mainAxisCellCount: 3,
+              //     child: MyCustomWidget(
+              //       icons: Icons.food_bank,
+              //     )),
+              // StaggeredGridTile.count(
+              //     crossAxisCellCount: 2,
+              //     mainAxisCellCount: 2,
+              //     child:MyCustomWidget(
+              //       icons: Icons.remove_red_eye,
+              //       bgcolor: Colors.red,
+              //     )),
+              // StaggeredGridTile.count(
+              //     crossAxisCellCount: 2,
+              //     mainAxisCellCount: 3,
+              //     child: MyCustomWidget(
+              //       icons: Icons.password,
+              //     )),
+              // StaggeredGridTile.count(
+              //     crossAxisCellCount: 2,
+              //     mainAxisCellCount: 3,
+              //     child: MyCustomWidget(
+              //       icons: Icons.flag_circle,
+              //     ))
+              // ],
+              ),
         ),
       ),
     );
