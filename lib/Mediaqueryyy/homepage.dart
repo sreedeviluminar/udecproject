@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:luminar_assignments/Mediaqueryyy/responsive/desktop_body.dart';
-import 'package:luminar_assignments/Mediaqueryyy/responsive/mobile_body.dart';
+import 'package:udecproject/Mediaqueryyy/responsive/desktop_body.dart';
+import 'package:udecproject/Mediaqueryyy/responsive/mobile_body.dart';
 
 
 class HomePage extends StatefulWidget {
