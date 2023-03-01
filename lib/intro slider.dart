@@ -27,8 +27,6 @@ class HomePage extends StatelessWidget {
             ]
         )
       )
-
-
     );
 
     return IntroductionScreen(
