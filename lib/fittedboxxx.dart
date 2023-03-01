@@ -32,27 +32,27 @@ class _FittedBoxPageState extends State<FittedBoxPage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-         // FittedBox(
-           // child:
-            Card(
-              color: Colors.white,
-              child: Row(
-                children: [
-                  Container(
-                    child: Text(
-                      "Understand With FittedBox",
-                      style: TextStyle(fontSize: 20,color: Colors.black),
+            FittedBox(
+              child: Card(
+                color: Colors.white,
+                child: Row(
+                  children: [
+                    Container(
+                      child: const Text(
+                        "Understand With FittedBox",
+                        style: TextStyle(fontSize: 20,color: Colors.black),
+                      ),
                     ),
-                  ),
-                  Container(
-                    height: 200,
-                    child:
-                    Image.asset("assets/images/greentexture.png"),
-                  ),
-                ],
+                    Container(
+                      height: 200,
+                      child:
+                      Image.asset("assets/images/greentexture.png"),
+                    ),
+                  ],
+                ),
               ),
             ),
-        //  ),
+
         ],
       ),
     );
