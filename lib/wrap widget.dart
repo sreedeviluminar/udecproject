@@ -28,23 +28,26 @@ class WrapWidgetDemo extends StatelessWidget {
         padding: EdgeInsets.all(10),
         child:
         Wrap(
+        //  textDirection: TextDirection.ltr,
+         // direction: Axis.vertical,
+          alignment: WrapAlignment.spaceEvenly,
           children: [
-            MyWidget(),
-            MyWidget(),
-            MyWidget(),
-            MyWidget(),
-            MyWidget(),
+            MyChip("name"),
+            MyChip("name"),
+            MyChip("name"),
+            MyChip("name"),
+            MyChip("name"),
+            MyChip("name"),
           ],
         ),
-
       ),
     );
   }
 }
 
 class MyWidget extends StatelessWidget {
-  //final String text;
-  //MyWidget(this.text);
+  final String text;
+  MyWidget(this.text);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -52,7 +55,7 @@ class MyWidget extends StatelessWidget {
       width: 50,
       height: 50,
       color: Colors.yellow.shade700,
-      //child: Center(child: Text(text)),
+      child: Center(child: Text(text)),
     );
   }
 }

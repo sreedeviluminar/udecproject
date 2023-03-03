@@ -6,6 +6,7 @@ const List<Map<String , dynamic>> dummyProducts = [
     "description" : "This Product is from the brand XXX , It has very high demand in market",
     "image" : "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
     "rating": 5,
+   // "images": ["assets/images/greentexture.png","assets/images/greentexture.png","assets/images/greentexture.png"]
 
   },
   {
