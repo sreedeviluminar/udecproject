@@ -24,10 +24,8 @@ class MyAppfont extends StatelessWidget {
               fontWeight: FontWeight.w700,
               fontStyle: FontStyle.italic,
             ))
-            //TextStyle(
-              //fontFamily: 'Shantell_Sans',
-            // fontSize: 35),),
-          //),
+            // TextStyle(fontFamily: 'Shantell_Sans', fontSize: 35),),
+
         ));
   }
 }
