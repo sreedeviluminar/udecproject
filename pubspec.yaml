@@ -43,6 +43,7 @@ dependencies:
   flutter_custom_clippers: ^2.1.0
   google_fonts:
   shared_preferences:
+  sqflite:
 
 
   # The following adds the Cupertino Icons font to your application.

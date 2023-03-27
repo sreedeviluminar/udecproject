@@ -48,7 +48,6 @@ class _MyLoginPageState extends State<MyLoginPage> {
           context, MaterialPageRoute(builder: (context) => MyDashboard()));
     }
   }
-
   @override
   void dispose() {
     // Clean up the controller when the widget is disposed.

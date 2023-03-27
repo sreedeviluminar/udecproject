@@ -52,3 +52,6 @@ class PhoneList extends StatelessWidget {
     );
   }
 }
+void main(){
+  runApp(MaterialApp(home:PhoneList()));
+}
