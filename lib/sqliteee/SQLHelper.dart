@@ -47,7 +47,7 @@ class SQLHelper {
       'task': task,
       'createdAt': DateTime.now().toString()
     };
-    final result = await db.update('todo', data);
+    final result = await db.update('todo', data , where: "id=?", whereArgs: [id]);
     return result;
   }
 
