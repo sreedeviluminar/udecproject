@@ -20,6 +20,12 @@ class _MyToDOState extends State<MyToDO> {
   //Hive class object
   final my_task_box = Hive.box("todo_box");
 
+  @override
+  initState(){
+    super.initState();
+    fetchTask();
+  }
+
 //hive create operation
   Future<void> createTask(Map<String, dynamic> newtask) async {
     await my_task_box.add(newtask);
