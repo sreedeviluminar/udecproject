@@ -21,7 +21,7 @@ class _MyToDOState extends State<MyToDO> {
   final my_task_box = Hive.box("todo_box");
 
   @override
-  initState(){
+  initState() {
     super.initState();
     fetchTask();
   }
@@ -45,6 +45,12 @@ class _MyToDOState extends State<MyToDO> {
     });
   }
 
+  //read a single data from hive
+  Map<String,dynamic> readData(int key){
+    final sdata = my_task_box.get(key);
+    return sdata;
+  }
+  
 //update task
   Future<void> updateTask(int itemkey, Map<String, String> uptask) async {
     await my_task_box.put(itemkey, uptask);
@@ -57,7 +63,8 @@ class _MyToDOState extends State<MyToDO> {
     fetchTask();
 
     ScaffoldMessenger.of(context)
-        .showSnackBar(const SnackBar(content: Text("Successfully Deleted")));
+        .showSnackBar(const SnackBar(
+        content: Text("Successfully Deleted")));
   }
 
   void showTask(BuildContext context, int? itemkey) {
