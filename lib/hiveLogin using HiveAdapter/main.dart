@@ -9,7 +9,7 @@ import 'model/user_model.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
- // Hive.registerAdapter(adapter);
+  Hive.registerAdapter(UserAdapter());
   await Hive.openBox<User>('user');
   runApp(GetMaterialApp(home : Login()));
 }
