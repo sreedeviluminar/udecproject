@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "462724709880",
+    "project_id": "mymapdec",
+    "storage_bucket": "mymapdec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462724709880:android:b76e93571684d31ad22a0d",
+        "android_client_info": {
+          "package_name": "com.sree.udecproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462724709880-1kgjb6bihgkuglkqsm7f6iumnmgfp7bq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBci_PJdiaQgc3OUuvNXtOq0y9PYTI8MP8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462724709880-1kgjb6bihgkuglkqsm7f6iumnmgfp7bq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

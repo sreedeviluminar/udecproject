@@ -73,7 +73,7 @@ class Register extends StatelessWidget {
 
     if (mail != "" && pwd != "") {
       if (emailvalidation == true) {
-
+ /// check user is already registered
         await Future.forEach(userlist, (users) {
           if (users.email == mail) {
             isUserFound = true;
