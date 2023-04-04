@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:udecproject/fireees/FireHelper.dart';
@@ -7,8 +8,10 @@ import 'package:udecproject/fireees/signup.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  //fetching the current user
+  User? user = FirebaseAuth.instance.currentUser;
   runApp(MaterialApp(
-    home: FireLogin(),
+    home: user == null ? FireLogin() : Homee(),
   ));
 }
 
@@ -52,7 +55,7 @@ class _FireLoginState extends State<FireLogin> {
                   }
                 });
                 mail.text = "";
-                pass.text ="";
+                pass.text = "";
               },
               child: Text("Login")),
           TextButton(
