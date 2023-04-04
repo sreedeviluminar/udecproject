@@ -14,6 +14,19 @@ class AuthHelper{
     }on FirebaseAuthException catch(e){
       return e.message;
     }
+  }
+//SIGN IN
+   Future<String?> signIn({required String email, required String password}) async {
+    try{
+      await auth.signInWithEmailAndPassword(email: email, password: password);
+      return null;
+    }on FirebaseAuthException catch(e){
+      return e.message;
+    }
+  }
 
+  //SIGN OUT
+  Future<void> signOut() async{
+    await auth.signOut();
   }
 }

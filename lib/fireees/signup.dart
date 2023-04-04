@@ -1,16 +1,6 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:udecproject/fireees/FireHelper.dart';
-
 import 'login.dart';
-
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  runApp(MaterialApp(
-    home: FireSignUp(),
-  ));
-}
 
 class FireSignUp extends StatefulWidget {
   @override
@@ -48,6 +38,9 @@ class _FireSignUpState extends State<FireSignUp> {
                         .showSnackBar(SnackBar(content: Text(result)));
                   }
                 });
+
+                email.text = "";
+                pass.text ="";
               },
               child: Text("SignUp"),
             )
