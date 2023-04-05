@@ -50,6 +50,9 @@ dependencies:
   email_validator:
   firebase_core:
   firebase_auth:
+  firebase_storage:
+  image_picker:
+  path:
 
 
 
