@@ -54,6 +54,7 @@ dependencies:
   image_picker:
   path:
   provider: ^6.0.5
+  permission_handler:
 
 
   # The following adds the Cupertino Icons font to your application.
