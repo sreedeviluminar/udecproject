@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -15,19 +14,17 @@ void main() {
       )));
 }
 class Run extends StatelessWidget {
-  var orientation, size, height, width;
+  var orientation,  height, width;
 
   @override
   Widget build(BuildContext context) {
     // getting the orientation of the app
-
     orientation = MediaQuery.of(context).orientation;
 
     //size of the window
-
-    size = MediaQuery.of(context).size;
-    height = size.height;
-    width = size.width;
+    //size = MediaQuery.of(context).size;
+    height = MediaQuery.of(context).size.height;
+    width =  MediaQuery.of(context).size.width;
 
     return Scaffold(
       appBar: AppBar(
@@ -38,7 +35,7 @@ class Run extends StatelessWidget {
       body: orientation == Orientation.portrait
           ? Container(
               color: Colors.blue,
-              height: height / 4,
+              height: height / 2,
               width: width / 4,
             )
           : Container(
